@@ -1,29 +1,39 @@
-//complete this code
+// Base Class: Animal
 class Animal {
-	constructor(species)
-	{
-		this.species=species;
-	}
-	species(){
-		return this.species;
-	}
-	makeSound(){
-   console.log(`${this.species} makes a sound`);
-	}
+  constructor(species) {
+    this._species = species;
+  }
+
+  get species() {
+    return this._species;
+  }
+
+  makeSound() {
+    console.log(`The ${this.species} makes a sound`);
+  }
 }
 
-class Dog extends Animal {
-	 purr() {
+// Subclass: Cat
+class Cat extends Animal {
+  constructor() {
+    super("Cat");
+  }
+
+  purr() {
     console.log("purr");
   }
 }
 
-class Cat extends Animal {
-	bark() {
+// Subclass: Dog
+class Dog extends Animal {
+  constructor() {
+    super("Dog");
+  }
+
+  bark() {
     console.log("woof");
   }
 }
-
 // Do not change the code below this line
 window.Animal = Animal;
 window.Dog = Dog;
