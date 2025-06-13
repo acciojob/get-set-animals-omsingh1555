@@ -15,10 +15,7 @@ class Animal {
 
 // Subclass: Cat
 class Cat extends Animal {
-  constructor() {
-    super("Cat");
-  }
-
+ 
   purr() {
     console.log("purr");
   }
@@ -26,19 +23,13 @@ class Cat extends Animal {
 
 // Subclass: Dog
 class Dog extends Animal {
-  constructor() {
-    super("Dog");
-  }
+
 
   bark() {
     console.log("woof");
   }
 }
-module.exports = {
-  Animal,
-  Cat,
-  Dog,
-};
+
 // Do not change the code below this line
 window.Animal = Animal;
 window.Dog = Dog;
